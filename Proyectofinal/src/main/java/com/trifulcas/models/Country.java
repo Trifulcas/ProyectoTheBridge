@@ -62,7 +62,8 @@ public class Country {
 		this.lastUpdate = lastUpdate;
 	}
 	public int getFoo(){
-		return 0;
+		int a=9;
+		return a;
 	}
 	@Override
 	public String toString() {
