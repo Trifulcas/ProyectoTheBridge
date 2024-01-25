@@ -62,9 +62,9 @@ public class Country {
 		this.lastUpdate = lastUpdate;
 	}
 	public int getFoo(){
-		int a=9;
-		return a;
-	}
+
+		int b=8;
+		return b;}
 	@Override
 	public String toString() {
 		return "Country [countryId=" + countryId + ", country=" + country + ", lastUpdate=" + lastUpdate + "]";
