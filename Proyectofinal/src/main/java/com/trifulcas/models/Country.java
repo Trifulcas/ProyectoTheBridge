@@ -2,6 +2,7 @@ package com.trifulcas.models;
 
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.Objects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -64,6 +65,24 @@ public class Country {
 	@Override
 	public String toString() {
 		return "Country [countryId=" + countryId + ", country=" + country + ", lastUpdate=" + lastUpdate + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(country, countryId, lastUpdate);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Country other = (Country) obj;
+		return Objects.equals(country, other.country) && countryId == other.countryId
+				&& Objects.equals(lastUpdate, other.lastUpdate);
 	}
     
     
