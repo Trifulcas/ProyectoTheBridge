@@ -15,22 +15,22 @@ import jakarta.persistence.Table;
 @Table(name = "country")
 public class Country {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "country_id")
-    private int countryId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "country_id")
+	private int countryId;
 
-    @Column(name = "country", nullable = false)
-    private String country;
+	@Column(name = "country", nullable = false)
+	private String country;
 
-    @Column(name = "last_update", nullable = false)
-    private Timestamp lastUpdate;
+	@Column(name = "last_update", nullable = false)
+	private Timestamp lastUpdate;
 
 	public Country() {
 		super();
 		Date now = new Date();
 		this.lastUpdate = new Timestamp(now.getTime());
-	
+
 	}
 
 	public Country(String country) {
@@ -61,10 +61,13 @@ public class Country {
 	public void setLastUpdate(Timestamp lastUpdate) {
 		this.lastUpdate = lastUpdate;
 	}
-	public int getFoo(){
 
-		int b=8;
-		return b;}
+	public int getFoo() {
+
+		int b = 8;
+		return b;
+	}
+
 	@Override
 	public String toString() {
 		return "Country [countryId=" + countryId + ", country=" + country + ", lastUpdate=" + lastUpdate + "]";
@@ -87,6 +90,5 @@ public class Country {
 		return Objects.equals(country, other.country) && countryId == other.countryId
 				&& Objects.equals(lastUpdate, other.lastUpdate);
 	}
-    
-    
+
 }
