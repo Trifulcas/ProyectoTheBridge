@@ -60,7 +60,9 @@ public class Country {
 	public void setLastUpdate(Timestamp lastUpdate) {
 		this.lastUpdate = lastUpdate;
 	}
-
+	public int getFoo(){
+		return 0;
+	}
 	@Override
 	public String toString() {
 		return "Country [countryId=" + countryId + ", country=" + country + ", lastUpdate=" + lastUpdate + "]";
